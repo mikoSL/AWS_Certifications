@@ -11,11 +11,16 @@
 ## Secure Data (At Rest and In Transit)
 
 ### Protect data at Rest
+* Threat to Data At Rest
+![ThreattoDataAtRest](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/4_ThreattoDataAtRest.JPG)
+
 #### S3
+![S3FeaturesForProtectDataAtRest_commented](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/5_S3FeaturesForProtectDataAtRest_commented.jpg)
 #### EBS
 * EBS volume in raw, unformatted mode.
 * Can partition EBS volume.
 * Attach EBS volumes to EC2 instances.
+![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
 
 #### RDS
 * Same secure infra as EC2.
@@ -39,6 +44,8 @@ SELECT CustomerFirstName, CustomerLastName from Customers
 Where CustomerFirstName = AES_ENCRYPT('John', @key)
 
 ```
+![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
+
 #### Glacier
 * Protected using server-side encryption.
 * AWS generates seperated unique encryption keys for each Glacier archive and encrypts it using AES-256.
@@ -48,8 +55,12 @@ Where CustomerFirstName = AES_ENCRYPT('John', @key)
 
 #### EMR
 * BY default, EMR instance does not encrypt data at rest!
+![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
 
 ### Protect data in Transit
+* Threat to data in transit
+![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
+
 #### S3
 * SSL/TLS
 
@@ -62,6 +73,7 @@ Where CustomerFirstName = AES_ENCRYPT('John', @key)
 * SSL/TLS(HTTPs)
 
 #### EMR
+![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
 
 ## Secure your OS and Applications
 
@@ -74,6 +86,14 @@ Where CustomerFirstName = AES_ENCRYPT('John', @key)
 * Use bastion hosts to enforce control and visibility.
 
 ### Creating custom AMIs
+* Cleanup task before publish AMI
+![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
+
+* Secure Linux/Unix AMIs
+![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
+
+* Secure Windows AMIs
+![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
 
 ### Bootstrapping
 * Puppet, Chef, Capistrano, Cloud-Init or Cfn-Init
@@ -125,6 +145,8 @@ Where CustomerFirstName = AES_ENCRYPT('John', @key)
 
 ### Securing periphery systems: user repositories(IAM users), DNS, NTP
 
+![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
+
 ### Building threat protection layers
 * VPC
 * implicit firewall rules at hypervisor-layer
@@ -140,13 +162,21 @@ Where CustomerFirstName = AES_ENCRYPT('John', @key)
 5. Anomaly detection gateway
 6. Advanced persistent threat detection gateways
 
+![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
+
 ### Test security
 
 ### Managing metrics and improvement
 
+![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
+
 ### Mitigating and protecting against Dos & DDoS attacks
 
+![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
+
 ## Manage security monitoring, altering, audit trail and incident response
+
+![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
 
 ### Using Change Management tools
 
