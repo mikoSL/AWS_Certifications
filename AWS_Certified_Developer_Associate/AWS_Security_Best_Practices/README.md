@@ -1,6 +1,6 @@
 # AWS Security Best Practices(Aug 2016)
 
-![AWS_Security_BestPractice_MindMap](../master/AWS_Security_Best_Practices/pic/AWS_Security_BestPractice_MindMap.PNG)
+![AWS_Security_BestPractice_MindMap](../pic/AWS_Security_BestPractice_MindMap.PNG)
 
 ## AWS Shared Responsible Model
 
