@@ -20,7 +20,7 @@
 * EBS volume in raw, unformatted mode.
 * Can partition EBS volume.
 * Attach EBS volumes to EC2 instances.
-![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
+![EBSFeaturesForProtectedDataAtRest_Commented](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/6EBSFeaturesForProtectedDataAtRest_Commented.jpg)
 
 #### RDS
 * Same secure infra as EC2.
@@ -44,7 +44,7 @@ SELECT CustomerFirstName, CustomerLastName from Customers
 Where CustomerFirstName = AES_ENCRYPT('John', @key)
 
 ```
-![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
+![RDSPlatformLevelDataProtectionAtRest_Comment.jpg](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/7_RDSPlatformLevelDataProtectionAtRest_Comment.jpg)
 
 #### Glacier
 * Protected using server-side encryption.
@@ -55,11 +55,11 @@ Where CustomerFirstName = AES_ENCRYPT('John', @key)
 
 #### EMR
 * BY default, EMR instance does not encrypt data at rest!
-![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
+![ProtectDataAtRestOnEMR_Commented](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/8_ProtectDataAtRestOnEMR_Commented.jpg)
 
 ### Protect data in Transit
 * Threat to data in transit
-![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
+![ThreatToDataInTransit](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/9_ThreatToDataInTransit.JPG)
 
 #### S3
 * SSL/TLS
@@ -73,7 +73,7 @@ Where CustomerFirstName = AES_ENCRYPT('John', @key)
 * SSL/TLS(HTTPs)
 
 #### EMR
-![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
+![ProtectDataInTransitOnEMR.jpg](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/10_ProtectDataInTransitOnEMR.jpg)
 
 ## Secure your OS and Applications
 
@@ -87,13 +87,13 @@ Where CustomerFirstName = AES_ENCRYPT('John', @key)
 
 ### Creating custom AMIs
 * Cleanup task before publish AMI
-![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
+![ClearnUpTasksBeforePublishAnAMI](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/11_ClearnUpTasksBeforePublishAnAMI.jpg)
 
 * Secure Linux/Unix AMIs
-![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
+![SecureLinuxUnixAMIs.JPG](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/12_SecureLinuxUnixAMIs.JPG)
 
 * Secure Windows AMIs
-![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
+![SecureWindowsAMI.jpg](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/13_SecureWindowsAMI.jpg)
 
 ### Bootstrapping
 * Puppet, Chef, Capistrano, Cloud-Init or Cfn-Init
@@ -145,7 +145,7 @@ Where CustomerFirstName = AES_ENCRYPT('John', @key)
 
 ### Securing periphery systems: user repositories(IAM users), DNS, NTP
 
-![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
+![ControlForPeripherySystem.JPG](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/14_ControlForPeripherySystem.JPG)
 
 ### Building threat protection layers
 * VPC
@@ -162,21 +162,21 @@ Where CustomerFirstName = AES_ENCRYPT('John', @key)
 5. Anomaly detection gateway
 6. Advanced persistent threat detection gateways
 
-![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
+![LayeredNetworkDefendsInCloud](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/15_LayeredNetworkDefendsInCloud.JPG)
 
 ### Test security
 
 ### Managing metrics and improvement
 
-![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
+![ManagingImprovingMetrics](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/16_ManagingImprovingMetrics.jpg)
 
 ### Mitigating and protecting against Dos & DDoS attacks
 
-![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
+![TechniquesMitigationForDDoSAttack.jpg](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/17_TechniquesMitigationForDDoSAttack.jpg)
 
 ## Manage security monitoring, altering, audit trail and incident response
 
-![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
+![LogFileConsiderations.JPG](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/18_LogFileConsiderations.JPG)
 
 ### Using Change Management tools
 
