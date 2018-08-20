@@ -4,7 +4,7 @@
 
 ## AWS Shared Responsible Model
 * Comparing with three different services
-![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png
+![SharedResponsibleModel](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices/pic/0_SharedResponsibleModel.png)
 
 ## AWS Account, IAM Users, Groups and Roles
 
