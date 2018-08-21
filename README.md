@@ -5,3 +5,5 @@
 
 * MindMap and Tables from Best Practices:
 1. [Security best practice](https://github.com/mikoSL/AWS_Certifications/tree/master/AWS_Certified_Developer_Associate/AWS_Security_Best_Practices)
+
+2. [Well-Architected Framework](https://github.com/mikoSL/AWS_Certifications/tree/master/AWS_Certified_Developer_Associate/AWS_Well_Architected_Framework)
