@@ -2,26 +2,26 @@
 
 ![Architecting for the Cloud AWS Best Practices MindMap](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Cloud_Best_Practices/pic/Design_principles_of_Architecting_Cloud.png)
 
-## Scalability
-### Stateless application
+## 1.Scalability
+### 1.1 Stateless application
 ![How to distribute load to multiple nodes](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Cloud_Best_Practices/pic/1_HowToDistributeLoadToMultipleNodes.png)
 
-### Stateless component
+### 1.2 Stateless component
 * e.g HTTP cookies. DynamoDB is good choice to store native sessions.
 * S3 and EFS for larger files.
 * SWF**(Simple Workflow Service) store execution history.
 ![How to implement session affinity](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Cloud_Best_Practices/pic/2_HowToImplementSessionAffinity.png)
 
-### Distributed processing
+### 1.3 Distributed processing
 ![How to implement Distributed processing](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Cloud_Best_Practices/pic/3_HowToImplementDistributedProcessing.png)
 
-## Disposable resource instead of fixed
+## 2. Disposable resource instead of fixed
 
-### Instantiating Compute resource
-#### Bootstrapping
+### 2.1 Instantiating Compute resource
+#### 2.1.1 Bootstrapping
 ![Bootstrapping in Practices](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Cloud_Best_Practices/pic/4_BootstrappingInPractice.png)
 
-#### Golden image (snapshot of a particular state of resource)
+#### 2.1.2 Golden image (snapshot of a particular state of resource)
 * ECS instance
 1. customize it then save its config by creating an AMI) (recommend using script)
 2. having existing on-premising virtualized environment, then using VM Import/Export from AWS
@@ -32,13 +32,13 @@
 * Container(e.g.Docker)
 ![Container for golden image](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Cloud_Best_Practices/pic/5_DockerForDistrutedProcessing.png)
 
-#### Hybrid (Bootstrapping & golden image) e.g. Elastic Beanstalk is a hybrid model.
+#### 2.1.3 Hybrid (Bootstrapping & golden image) e.g. Elastic Beanstalk is a hybrid model.
 ![Line between Bootstrapping and golden image](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Cloud_Best_Practices/pic/6_LineBetweenBootstrappingGoldenImage.png)
 
-### Infrastructure as Code
+### 2.2 Infrastructure as Code
 ![CloudFormation](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Cloud_Best_Practices/pic/7_CloudFormation.png)
 
-## Automation
+## 3. Automation
 * Elastic Beanstalk
 * EC2 auto recovery
 * CloudWatch Alarm(alarm --> SNS --> lambda --> SQS or POST request to an HTTP/S endpoint)
@@ -47,7 +47,7 @@
 * OpsWorks Lifecycel events (e.g.trigger chef recipes)
 * Lambda scheduled events
 
-## Loose coupling (reduces interdependencies)
+## 4. Loose coupling (reduces interdependencies)
 * Well-definded interfaces (components interact ONLY through specific, technology-agnostic interfaces e.g. RESTful APIs)
 ![API Gateway](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Cloud_Best_Practices/pic/8_APIGateway.png)
 
@@ -60,33 +60,33 @@
 * Graceful failure
 ![Graceful failure in Practices](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Cloud_Best_Practices/pic/11_GracefulFailareInPractice.png)
 
-## Services, not servers
+## 5. Services, not servers
 * Managed Services (SQS, S3, DynamoDB, CloudFront, ELB, CloudSearch, SES, Elastic Transcoder)
 * Serverless architectures(Lambda, API Gateway, Cognito)
 
-## Database
-### Rational database (RDS)
+## 6. Database
+### 6.1 Rational database (RDS)
 * Scalability (Read Replica and data partitioning and sharding to scale write capacity)
 ![How to take advantage of read replica](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Cloud_Best_Practices/pic/12_HowToTakeAdvantageOfReadReplicas.png)
 
 * High availability(RDS multi-AZ deployment feature, when primary node is failing, can have read-only mode by utilizing read replicas)
 * Anti-patterns (use NoSQL if no need to join or complex transaction, use S3 for binary file e.g. image, video, audio)
 
-### NoSQL Database(DynamoDB)
+### 6.2 NoSQL Database(DynamoDB)
 * Scalability(DynamoDB partitioning and replication automatically)
 * High Availability (DynamoDB synchronously replicate data accross three facilities in region)
 * Anti-pattern(Use RDS if schema can not be denormalized or requires join)
 
-### Data Warehouse
+### 6.3 Data Warehouse
 * Scalability(massively parallel processing(MPP), columnar data storage and targeted data compression** encoding schemes)
 * High availability(multi-nodes cluster automatically replicate to another node, continously backup to S3, monitor health of cluster and automatically re-replicate data from failed drives and replace node if needed)
 * Anti-patterns(Redshift is a SQL DB, it is not for OLTP (Online Transaction Processing), not for concurrency workload involving reading and writing all columns for a small number of records at a time --use DynamaDB or RDS)
 
-### Search(CloudSearch-scala automatically, ElasticSearch- open source API )
+### 6.4 Search(CloudSearch-scala automatically, ElasticSearch- open source API )
 * Scalability (CloudSearch partitioning and replication automatically)
 * High availability(Both CloudSearch and ES store data across AZs)
 
-## Removing single points of failure
+## 7. Removing single points of failure
 * Introducing redundancy(to remove single point of failure. 1,standby redundancy-failover normally used in RDS. 2, active redundancy, when one fail, other absorb its workload.)
 * Detect failure (ELB, Route53, AutoScaling, OpsWorks, Elastic Beanstalk, deep health check)
 * Durable data storage
@@ -96,8 +96,10 @@
 ![Data Durability in practice](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Cloud_Best_Practices/pic/13_DataDurabilityInPractice.png)
 * Automated multi-data center resilience(protection over disruption, e.g AZs,ELB, autoscaling)
 * Fault isolation and traditional horizontal scaling(handle harmful request)--Shuffle sharding (8 instances --> 4 shards with 2 instances each --> distribute customer to each shard-->customer try every endpoint until one succeeds)
-## Optimize for Cost
+
+## 8. Optimize for Cost
 * Right size
+
 ![Continuous monitoring and tagging](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Cloud_Best_Practices/pic/14_ContinuousMonitoringAndTagging.png)
 
 * Elasticity
@@ -112,7 +114,7 @@
 2. Spot Instance (EC2, ideal for flexible start and end times)
 ![Spot pricing best Practices](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Cloud_Best_Practices/pic/16_SpotPricingBestPractice.png)
 
-## Caching
+## 9. Caching
 * Application data caching(ElasticCache: Memcached and Redis)
 1. I/O-intensive database queries
 2. outcome of computationally intensive processing
@@ -121,7 +123,7 @@
 1. Copies of static content(e.g. images, css files, streaming of pre-recorded video
 2. Dynamic content(e.g. html response, live video)
 
-## Security
+## 10. Security
 * Utilize AWS features for defense in depth (VPC, WAF, IAM)
 * Offload security responsiblity to AWS (security patch repsonsiblity on AWS- RDS, ElasticCache, CloudSearch etc.)
 * Reduce privileged access
