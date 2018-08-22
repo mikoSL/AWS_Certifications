@@ -1,6 +1,6 @@
 # Architecting for the Cloud(AWS Best Practices)(Feb 2016)
 
-![AWS_Cloud_Best_Practices_MindMap](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Well_Architected_Framework/pic/AWS_Well_Architected_Framework_MindMap.png)
+![Architecting for the Cloud AWS Best Practices MindMap](https://github.com/mikoSL/AWS_Certifications/blob/master/AWS_Certified_Developer_Associate/AWS_Cloud_Best_Practices/pic/Design_principles_of_Architecting_Cloud.png)
 
 ## Scalability
 ### Stateless application
